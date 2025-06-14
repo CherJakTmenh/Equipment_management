@@ -1,36 +1,39 @@
 public class Item {
-    private String name;
-    private String description;
-    private int quantity;
+    private String Item_ID;
+    private String Name;
+    private int Quantity;
+    private int Category_ID; // Foreign key to Category
 
-    public Item(String name, String description, int quantity) {
-        this.name = name;
-        this.description = description;
-        this.quantity = quantity;
+    public Item(String itemID, String name, int quantity, int categoryID) {
+        this.Item_ID = itemID;
+        this.Quantity = quantity;
+        this.Name = name;
+        this.Category_ID = categoryID;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
+    public String getItemId() {
+        return Item_ID;
+    }
     public int getQuantity() {
-        return quantity;
+        return Quantity;
+    }
+    public int getCategoryId() {
+        return Category_ID;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
     @Override
     public String toString() {
         return "Item{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", quantity=" + quantity +
+                "itemId='" + Item_ID + '\'' +
+                ", name='" + Name + '\'' +
+                ", quantity=" + Quantity +
+                ", categoryId=" + Category_ID +
                 '}';
     }
 }

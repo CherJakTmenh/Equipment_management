@@ -1,3 +1,12 @@
+// BorrowRequest {
+//   req_ID integer unique
+//   User_ID integer //Foreign_Key
+//   Item_ID integer //Foreign_key
+//   req_date timestamp
+//   req_Status bool
+//   Description text
+// }
+
 public class BorrowRequest {
     private String itemId;
     private String userId;
