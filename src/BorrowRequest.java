@@ -8,9 +8,9 @@
 // }
 
 public class BorrowRequest {
-    private String itemId;
-    private String userId;
-    private String borrowDate;
+    private int req_ID;
+    private int User_ID;
+    private int Item_ID;
     private String returnDate;
 
     public BorrowRequest(String itemId, String userId, String borrowDate, String returnDate) {
