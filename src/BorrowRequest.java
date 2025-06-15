@@ -8,31 +8,50 @@
 // }
 
 public class BorrowRequest {
-    private int req_ID;
+    private int Req_ID;
     private int User_ID;
     private int Item_ID;
-    private String returnDate;
+    private String Req_date;
+    private boolean Req_status;
+    private String Description;
+    
 
-    public BorrowRequest(String itemId, String userId, String borrowDate, String returnDate) {
-        this.itemId = itemId;
-        this.userId = userId;
-        this.borrowDate = borrowDate;
-        this.returnDate = returnDate;
+    // public BorrowRequest(String itemId, String userId, String borrowDate, String returnDate) {
+    //     this.Req_ID = 0; // Assuming ID will be set by the database
+    //     this.User_ID = Integer.parseInt(userId);
+    //     this.Item_ID = Integer.parseInt(itemId);
+    //     this.Req_date = borrowDate;
+    //     this.Req_status = true; // Assuming the request is active when created
+    //     this.Description = "Borrow request for item " + itemId + " by user " + userId + " from " + borrowDate + " to " + returnDate;
+    // }
+    public BorrowRequest(int reqId, int userId, int itemId, String reqDate, boolean reqStatus, String description) {
+        this.Req_ID = reqId;
+        this.User_ID = userId;
+        this.Item_ID = itemId;
+        this.Req_date = reqDate;
+        this.Req_status = reqStatus;
+        this.Description = description;
     }
-
+    public int getReqId() {
+        return Req_ID;
+    }
     public String getItemId() {
-        return itemId;
+        return String.valueOf(Item_ID);
     }
 
     public String getUserId() {
-        return userId;
+        return String.valueOf(User_ID);
     }
 
-    public String getBorrowDate() {
-        return borrowDate;
+    public String getRequest_date() {
+        return Req_date;
     }
 
-    public String getReturnDate() {
-        return returnDate;
+    public boolean isRequestStatus() {
+        return Req_status;
     }
+    public String getDescription() {
+        return Description;
+    }
+
 }
