@@ -1,46 +1,42 @@
 public class BorrowStatus {
-    private String itemId;
-    private String userId;
-    private String status; // e.g., "borrowed", "returned", "overdue"
+    private String Record_ID;
+    private int User_ID;
+    private int Item_ID; // e.g., "borrowed", "returned", "overdue"
     private String borrowDate;
-    private String returnDate;
+    private String Return_ID;
 
-    public BorrowStatus(String itemId, String userId, String status, String borrowDate, String returnDate) {
-        this.itemId = itemId;
-        this.userId = userId;
-        this.status = status;
+    public BorrowStatus(String recordId, int userId, int itemId, String borrowDate, String returnId) {
+        this.Record_ID = recordId;
+        this.User_ID = userId;
+        this.Item_ID = itemId;
         this.borrowDate = borrowDate;
-        this.returnDate = returnDate;
+        this.Return_ID = returnId;
     }
 
-    public String getItemId() {
-        return itemId;
+    public String getRecordId() {
+        return Record_ID;
     }
-
-    public String getUserId() {
-        return userId;
+    public int getUserId() {
+        return User_ID;
+    }   
+    public int getItemId() {
+        return Item_ID;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
     public String getBorrowDate() {
         return borrowDate;
     }
-
-    public String getReturnDate() {
-        return returnDate;
+    public String getReturnId() {
+        return Return_ID;
     }
 
     @Override
     public String toString() {
         return "BorrowStatus{" +
-                "itemId='" + itemId + '\'' +
-                ", userId='" + userId + '\'' +
-                ", status='" + status + '\'' +
+                "Record_ID='" + Record_ID + '\'' +
+                ", User_ID=" + User_ID +
+                ", Item_ID=" + Item_ID +
                 ", borrowDate='" + borrowDate + '\'' +
-                ", returnDate='" + returnDate + '\'' +
+                ", Return_ID='" + Return_ID + '\'' +
                 '}';
     }
 }
