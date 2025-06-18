@@ -1,22 +1,22 @@
 public class Notification {
-    private String notificationId;
-    private String userId;
+    private String Noti_ID;
+    private String User_ID;
     private String message;
     private String timestamp;
 
     public Notification(String notificationId, String userId, String message, String timestamp) {
-        this.notificationId = notificationId;
-        this.userId = userId;
+        this.Noti_ID = notificationId;
+        this.User_ID = userId;
         this.message = message;
         this.timestamp = timestamp;
     }
 
     public String getNotificationId() {
-        return notificationId;
+        return Noti_ID;
     }
 
     public String getUserId() {
-        return userId;
+        return User_ID;
     }
 
     public String getMessage() {
@@ -30,8 +30,8 @@ public class Notification {
     @Override
     public String toString() {
         return "Notification{" +
-                "notificationId='" + notificationId + '\'' +
-                ", userId='" + userId + '\'' +
+                "notificationId='" + Noti_ID + '\'' +
+                ", userId='" + User_ID + '\'' +
                 ", message='" + message + '\'' +
                 ", timestamp='" + timestamp + '\'' +
                 '}';
