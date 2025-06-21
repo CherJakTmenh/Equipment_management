@@ -41,15 +41,5 @@ public class User {
         return Department_Name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId='" + User_ID + '\'' +
-                ", name='" + Name + '\'' +
-                ", email='" + Gmail + '\'' +
-                ", role='" + Role + '\'' +
-                ", phoneNumber='" + Phone_Number + '\'' +
-                ", departmentName='" + Department_Name + '\''+
-                '}';
-    }   
+   
 }

@@ -86,14 +86,5 @@ public class Request {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Request{" +
-                "requestId='" + requestId + '\'' +
-                ", userId='" + userId + '\'' +
-                ", itemId='" + itemId + '\'' +
-                ", quantity=" + quantity +
-                ", status='" + status + '\'' +
-                '}';
-    }
+   
 }

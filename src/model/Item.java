@@ -29,13 +29,4 @@ public class Item {
     }
 
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "itemId='" + Item_ID + '\'' +
-                ", name='" + Name + '\'' +
-                ", quantity=" + Quantity +
-                ", categoryId=" + Category_ID +
-                '}';
-    }
 }
