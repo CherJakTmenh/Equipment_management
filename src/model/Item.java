@@ -1,32 +1,63 @@
 package model;
 
-public class Item {
-    private String Item_ID;
-    private String Name;
-    private int Quantity;
-    private int Category_ID; // Foreign key to Category
+import java.util.ArrayList;
+import java.util.List;
 
-    public Item(String itemID, String name, int quantity, int categoryID) {
-        this.Item_ID = itemID;
-        this.Quantity = quantity;
-        this.Name = name;
-        this.Category_ID = categoryID;
+
+// Represents an item entity from the database
+public class Item {
+    // Fields (private for encapsulation)
+    private String itemId;
+    private String name;
+    private int quantity;
+    private int categoryId;
+
+    // Static field
+    private static int itemCount = 0;
+
+
+    private static List<Item> items = new ArrayList<>();
+
+
+    // Constructor
+    public Item(String itemId, String name, int quantity, int categoryId) {
+        this.itemId = itemId;
+        this.name = name;
+        this.quantity = quantity;
+        this.categoryId = categoryId;
+        itemCount++;
+        items.add(this);
+    }
+
+    // Overloaded constructor (no category)
+    public Item(String itemId, String name, int quantity) {
+        this(itemId, name, quantity, -1); // -1 means no category
+    }
+
+    // Getters (public for access control)
+    public String getItemId() {
+        return itemId;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-
-    public String getItemId() {
-        return Item_ID;
-    }
     public int getQuantity() {
-        return Quantity;
+        return quantity;
     }
+
     public int getCategoryId() {
-        return Category_ID;
+        return categoryId;
     }
 
+    // Static method to get total items created
+    public static int getItemCount() {
+        return itemCount;
+    }
 
+    // Static method to get all items
+    public static List<Item> getAllItems() {
+        return items;
+    }
 }

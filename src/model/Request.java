@@ -14,17 +14,15 @@ public class Request {
     // Static field to keep track of the number of requests
     private static int requestCount = 0;
 
-    // Static collection to store all requests (for demonstration)
-    // Using List to maintain order and allow duplicates
     private static List<Request> allRequests = new ArrayList<>();
 
-    // No-arg constructor
+
     public Request() {
         requestCount++;
         allRequests.add(this);
     }
 
-    // Overloaded constructor
+   
     public Request(String requestId, String userId, String itemId, int quantity, String status) {
         this.requestId = requestId;
         this.userId = userId;

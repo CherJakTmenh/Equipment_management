@@ -1,45 +1,87 @@
 package model;
 
-public class User {
-    private String User_ID;
-    private String Name;
-    private String Gmail;
-    private String Role;
-    private String Phone_Number;
-    private String Department_Name;
+import java.util.ArrayList;
+import java.util.List;
 
-    public User(String userId, String name, String email, String role, String phoneNumber, String departmentName) {
-        this.User_ID = userId;
-        this.Name = name;
-        this.Gmail = email;
-        this.Role = role;
-        this.Phone_Number = phoneNumber;
-        this.Department_Name = departmentName;
+
+
+public class User {
+    private static int userCount = 0;
+    private String userId;
+    private String name;
+    private String gmail;
+    private String role;
+    private String phoneNumber;
+    private String departmentName;
+
+    public User(String userId, String name, String gmail, String role, String phoneNumber, String departmentName) {
+        this.userId = userId;
+        this.name = name;
+        this.gmail = gmail;
+        this.role = role;
+        this.phoneNumber = phoneNumber;
+        this.departmentName = departmentName;
+        userCount++;
     }
 
+    public User(String userId, String name, String gmail) {
+        this(userId, name, gmail, "", "", "");
+    }
+
+
     public String getUserId() {
-        return User_ID;
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {
-        return Name;
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getGmail() {
-        return Gmail;
+        return gmail;
+    }
+
+    public void setGmail(String gmail) {
+        this.gmail = gmail;
     }
 
     public String getRole() {
-        return Role;
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getPhoneNumber() {
-        return Phone_Number;
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getDepartmentName() {
-        return Department_Name;
+        return departmentName;
     }
 
-   
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    public static int getUserCount() {
+        return userCount;
+    }
+
+    public static List<User> createUserList() {
+        return new ArrayList<>();
+    }
 }
